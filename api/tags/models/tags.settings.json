@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "tags"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tag_name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "tag_name"
+    },
+    "posts": {
+      "via": "tags",
+      "collection": "posts"
+    }
+  }
+}

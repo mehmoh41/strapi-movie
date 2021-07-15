@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Categories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category_name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "category_name"
+    },
+    "movies": {
+      "via": "categories",
+      "collection": "movies"
+    },
+    "posts": {
+      "via": "categories",
+      "collection": "posts"
+    }
+  }
+}
