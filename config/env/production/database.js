@@ -18,8 +18,9 @@ module.exports = ({ env }) => ({
         },
       },
       options: {
-        ssl: false,
+        ssl: true,
       },
     },
   },
 });
+
